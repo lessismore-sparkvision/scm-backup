@@ -13,14 +13,14 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Install Git
 RUN apt-get update && apt-get install -y git
 
-USER app
+USER $APP_UID
 WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["src/ScmBackup/ScmBackup.csproj", "src/ScmBackup/"]
-RUN dotnet restore "./src/ScmBackup/./ScmBackup.csproj"
+RUN dotnet restore "./src/ScmBackup/ScmBackup.csproj"
 COPY . .
 WORKDIR "/src/src/ScmBackup"
 RUN dotnet build "./ScmBackup.csproj" -c $BUILD_CONFIGURATION -o /app/build

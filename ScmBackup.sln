@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A94B6E7D-6E9E-4277-93B0-7D0686AA7CE3}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScmBackup.Tests", "src\ScmBackup.Tests\ScmBackup.Tests.csproj", "{52B54DBD-5A6F-4E5A-A0C7-B30BCF5A85F9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScmBackup.Tests.Integration", "src\ScmBackup.Tests.Integration\ScmBackup.Tests.Integration.csproj", "{6E03432D-9856-4699-BC7A-BE60B615F720}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DFCB2E0D-6444-490D-BDDF-52A572DA8EF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{6E03432D-9856-4699-BC7A-BE60B615F720}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E03432D-9856-4699-BC7A-BE60B615F720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E03432D-9856-4699-BC7A-BE60B615F720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCB2E0D-6444-490D-BDDF-52A572DA8EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCB2E0D-6444-490D-BDDF-52A572DA8EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCB2E0D-6444-490D-BDDF-52A572DA8EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCB2E0D-6444-490D-BDDF-52A572DA8EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,3 +7,4 @@ project.lock.json
 release/
 environment-variables.ps1
 src/ScmBackup/AssemblyCopyright.cs
+.env

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "scmbackup": "StartDebugging"
+      },
+      "environmentVariables": {
+        "BACKUP_DIR": "C:/scm-backup"
+      }
+      }
+    }
+}

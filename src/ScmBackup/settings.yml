@@ -11,7 +11,10 @@
 
 
 # all backups go here
-localFolder: 'c:\scm-backup'
+#localFolder: 'c:\scm-backup'
+
+# all backups go here on docker
+localFolder: '/app/backups'
 
 # all backups go here on docker
 # localFolder: '/app/backups'

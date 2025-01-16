@@ -1,0 +1,19 @@
+services:
+  scmbackup:
+    build:
+      context: .
+      dockerfile: src/ScmBackup/Dockerfile
+    env_file: .env
+    image: "${ACR_NAME}/scmbackup:1.9.0"
+    container_name: scmbackup-1.9.0
+    environment:
+      APP_UID: "${APP_UID:-1000}"
+      BACKUP_DIR: "${BACKUP_DIR:-C:/scm-backup}"
+      DOCKER_REGISTRY: "${ACR_NAME:-my-acr.azurecr.io}"
+      BITBUCKET_PASSWORD: "${BITBUCKET_PASSWORD}"
+      GITHUB_PASSWORD: "${GITHUB_PASSWORD}"
+      GITLAB_PASSWORD: "${GITLAB_PASSWORD}"
+    volumes:
+      - "${BACKUP_DIR}:/app/backups"
+    entrypoint: ["dotnet", "ScmBackup.dll"]
+    restart: no
